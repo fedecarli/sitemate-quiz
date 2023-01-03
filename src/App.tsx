@@ -18,21 +18,13 @@ import {
   StyleSheet,
   FlatList,
   Linking,
-  Share,
   Image,
   Dimensions,
 } from 'react-native';
-import newsService from './services/news';
 import axios from 'axios';
 
 const API_KEY = 'c4f5ba96d06e410c940954859e542d2b';
 const {width} = Dimensions.get('screen');
-
-const Item = ({title}) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
 
 const App = () => {
   const [searchText, onChangeText] = React.useState('apple');
